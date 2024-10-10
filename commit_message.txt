@@ -1,14 +1,14 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(init): initial repository setup and structure
+Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(data): add scaffold for linearly separable data generation
 
-Set up the foundational structure for the neural network fundamentals project.
+Create initial notebook structure with title and documentation section.
 
-This commit establishes the project repository with essential configuration files:
-- README.md providing project overview and basic instructions
-- requirements.txt specifying core dependencies (numpy, matplotlib, jupyter)
-- .gitignore for Python project standards
+Added the first two cells to neural_network_fundamentals.ipynb:
+- Title cell with project name
+- Section header describing linearly separable data generation approach
 
-The setup provides a clean starting point for implementing neural network concepts
-and experiments. Dependencies are minimal and focused on scientific computing and
-visualization needs.
+This scaffold establishes the notebook's structure and provides documentation
+for the data generation functionality that will be implemented in the next step.
+The approach follows educational best practices by documenting intent before
+implementation.
 
-Verified: Repository structure is clean and ready for development.
+Verified: Notebook is valid JSON and opens in Jupyter successfully.
