@@ -1,0 +1,14 @@
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(init): initial repository setup and structure
+
+Set up the foundational structure for the neural network fundamentals project.
+
+This commit establishes the project repository with essential configuration files:
+- README.md providing project overview and basic instructions
+- requirements.txt specifying core dependencies (numpy, matplotlib, jupyter)
+- .gitignore for Python project standards
+
+The setup provides a clean starting point for implementing neural network concepts
+and experiments. Dependencies are minimal and focused on scientific computing and
+visualization needs.
+
+Verified: Repository structure is clean and ready for development.
