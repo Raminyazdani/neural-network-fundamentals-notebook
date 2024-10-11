@@ -1,14 +1,16 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(data): add scaffold for linearly separable data generation
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(data): implement linearly separable data generation function
 
-Create initial notebook structure with title and documentation section.
+Implement function to generate two linearly separable 2D clusters using NumPy.
 
-Added the first two cells to neural_network_fundamentals.ipynb:
-- Title cell with project name
-- Section header describing linearly separable data generation approach
+The generate_linearly_separable_data() function creates two Gaussian-distributed
+clusters that can be separated by a linear decision boundary. Parameters include:
+- n_samples: number of points per cluster (default 100)
+- separation: distance between cluster centers (default 2.0)
 
-This scaffold establishes the notebook's structure and provides documentation
-for the data generation functionality that will be implemented in the next step.
-The approach follows educational best practices by documenting intent before
-implementation.
+Implementation uses np.random.seed(42) for reproducibility. Each cluster is
+generated with unit variance Gaussian noise around its center point, with centers
+positioned at (+separation, +separation) and (-separation, -separation).
 
-Verified: Notebook is valid JSON and opens in Jupyter successfully.
+This provides the foundation for demonstrating linear classification algorithms.
+
+Verified: Function generates expected data shapes and distributions.
