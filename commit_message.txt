@@ -1,16 +1,16 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(data): implement linearly separable data generation function
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(data): add XOR dataset generation
 
-Implement function to generate two linearly separable 2D clusters using NumPy.
+Implement XOR dataset generation for non-linear classification demonstrations.
 
-The generate_linearly_separable_data() function creates two Gaussian-distributed
-clusters that can be separated by a linear decision boundary. Parameters include:
-- n_samples: number of points per cluster (default 100)
-- separation: distance between cluster centers (default 2.0)
+Added generate_xor_data() function that creates the classic XOR problem:
+- 4 points representing XOR logic: (0,0)→0, (0,1)→1, (1,0)→1, (1,1)→0
+- Returns numpy arrays in same format as linearly separable data
 
-Implementation uses np.random.seed(42) for reproducibility. Each cluster is
-generated with unit variance Gaussian noise around its center point, with centers
-positioned at (+separation, +separation) and (-separation, -separation).
+The XOR dataset is a canonical example of a non-linearly separable problem that
+cannot be solved by linear classifiers. This will be used to demonstrate the
+limitations of linear models and the necessity of non-linear approaches.
 
-This provides the foundation for demonstrating linear classification algorithms.
+Added comprehensive markdown documentation explaining the XOR problem and its
+significance in neural network history.
 
-Verified: Function generates expected data shapes and distributions.
+Verified: XOR data structure matches expected format and values.
