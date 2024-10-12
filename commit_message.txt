@@ -1,16 +1,14 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(data): add XOR dataset generation
+Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(data): add examples and tests for XOR dataset
 
-Implement XOR dataset generation for non-linear classification demonstrations.
+Extend XOR dataset implementation with usage examples and validation.
 
-Added generate_xor_data() function that creates the classic XOR problem:
-- 4 points representing XOR logic: (0,0)→0, (0,1)→1, (1,0)→1, (1,1)→0
-- Returns numpy arrays in same format as linearly separable data
+Added code cell demonstrating how to generate and inspect XOR data:
+- Call generate_xor_data() and print shapes
+- Display actual XOR points and labels
+- Verify the non-linear separability property
 
-The XOR dataset is a canonical example of a non-linearly separable problem that
-cannot be solved by linear classifiers. This will be used to demonstrate the
-limitations of linear models and the necessity of non-linear approaches.
+This intermediate step validates the XOR implementation and provides examples
+for future reference. The examples will help users understand how to work with
+the dataset in subsequent classification experiments.
 
-Added comprehensive markdown documentation explaining the XOR problem and its
-significance in neural network history.
-
-Verified: XOR data structure matches expected format and values.
+Verified: Examples run without errors and produce expected output.
