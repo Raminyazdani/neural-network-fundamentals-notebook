@@ -1,14 +1,21 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(viz): add visualization section scaffold
+Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(viz): add visualization function with incorrect import (OOPS)
 
-Create scaffold for data visualization functionality.
+Implement visualize_data() function for scatter plotting - CONTAINS BUG.
 
-Added markdown section "## Data Visualization" with documentation describing
-the visualization approach for displaying 2D data points with color-coded labels.
+Added visualization function with scatter plot implementation:
+- Creates figure and axis
+- Plots points colored by class label
+- Adds labels, legend, and grid
+- Supports custom titles
 
-This preparation step establishes the structure before implementing the
-visualization function. Following the pattern of documentation-first development
-to maintain clear notebook organization.
+**BUG INTRODUCED:** Used incorrect matplotlib import statement:
+  from matplotlib import plot
 
-Next step will implement the actual plotting function.
+Should be:
+  import matplotlib.pyplot as plt
 
-Verified: Notebook structure remains valid and well-organized.
+This is a common mistake when quickly implementing visualization code. The
+function logic is correct but will fail at runtime due to the wrong import
+path. This will be caught and fixed in the next commit.
+
+Status: Bug present, needs immediate fix.
