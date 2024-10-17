@@ -1,17 +1,17 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(viz): fix matplotlib import statement (HOTFIX)
+Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(ml): add scikit-learn dependency and SVM import
 
-Fix matplotlib import error discovered during testing.
+Add scikit-learn for SVM classification and import LinearSVC.
 
-**FIXED:** Corrected import from wrong path to standard convention:
-  Before: from matplotlib import plot
-  After:  import matplotlib.pyplot as plt
+Changes:
+1. Updated requirements.txt to include scikit-learn>=1.0.0
+2. Added "## Linear SVM Classification" section to notebook
+3. Imported LinearSVC: from sklearn.svm import LinearSVC
 
-This hotfix resolves the AttributeError that would occur when calling plt
-functions. The standard matplotlib convention is to import pyplot as plt, which
-provides access to the MATLAB-style plotting interface.
+This prepares the environment for implementing Support Vector Machine classification.
+LinearSVC provides an efficient linear SVM implementation suitable for linearly
+separable data. The dependency addition is minimal and focused on classification
+needs.
 
-All visualization code now works correctly with proper imports. This quick fix
-demonstrates the typical development workflow of catching and immediately
-resolving import errors.
+Next step will implement the actual SVM training pipeline.
 
-Verified: Import error resolved, visualization function works as expected.
+Verified: scikit-learn installs successfully and LinearSVC imports without errors.
