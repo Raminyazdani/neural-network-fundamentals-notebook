@@ -1,17 +1,15 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(ml): add scikit-learn dependency and SVM import
+Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(docs): add documentation for SVM classification approach
 
-Add scikit-learn for SVM classification and import LinearSVC.
+Extend SVM section with comprehensive documentation about linear classification.
 
-Changes:
-1. Updated requirements.txt to include scikit-learn>=1.0.0
-2. Added "## Linear SVM Classification" section to notebook
-3. Imported LinearSVC: from sklearn.svm import LinearSVC
+Added detailed markdown explaining:
+- How Linear SVM works for finding decision boundaries
+- The concept of maximum margin classification
+- Why it's suitable for linearly separable data
+- Expected behavior on our generated datasets
 
-This prepares the environment for implementing Support Vector Machine classification.
-LinearSVC provides an efficient linear SVM implementation suitable for linearly
-separable data. The dependency addition is minimal and focused on classification
-needs.
+This documentation provides educational context before the implementation,
+helping users understand the theory behind the code they'll see in the next
+step. Follows best practices for educational notebooks.
 
-Next step will implement the actual SVM training pipeline.
-
-Verified: scikit-learn installs successfully and LinearSVC imports without errors.
+Verified: Documentation is clear and technically accurate.
