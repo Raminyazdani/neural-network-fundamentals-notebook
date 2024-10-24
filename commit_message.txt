@@ -1,17 +1,19 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(analysis): visualize decision boundary for linear classification
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(analysis): apply Linear SVM to XOR dataset
 
-Apply decision boundary visualization to Linear SVM on linearly separable data.
+Demonstrate Linear SVM limitations by applying to XOR (non-linearly separable) dataset.
 
-Generated visualization showing:
-- Two clearly separated clusters (red and blue points)
-- Linear decision boundary cleanly separating the classes
-- Decision regions colored by predicted class
-- High confidence regions far from boundary
+Implementation:
+1. Generate XOR data using generate_xor_data()
+2. Visualize the XOR points showing the non-linear structure
+3. Train Linear SVM on XOR data
+4. Calculate accuracy (expected to be ~50% - random chance)
+5. Visualize decision boundary showing poor fit
 
-The visualization demonstrates that Linear SVM successfully finds an optimal
-linear separator for linearly separable data. The boundary maximizes the margin
-between classes, characteristic of SVM optimization.
+Results show Linear SVM fundamentally cannot solve XOR problem because no linear
+boundary can separate the classes. The model achieves approximately random
+accuracy, demonstrating the critical limitation of linear classifiers on
+non-linearly separable data.
 
-This provides baseline visualization for comparing with non-linear problems.
+This motivates the need for non-linear approaches (kernel methods, neural networks).
 
-Verified: Visualization clearly shows successful linear classification with clean separation.
+Verified: Linear SVM fails on XOR as expected, achieving ~50% accuracy.
