@@ -1,19 +1,15 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(analysis): apply Linear SVM to XOR dataset
+Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(docs): add analysis and observations about XOR experiment
 
-Demonstrate Linear SVM limitations by applying to XOR (non-linearly separable) dataset.
+Add detailed analysis explaining why Linear SVM fails on XOR problem.
 
-Implementation:
-1. Generate XOR data using generate_xor_data()
-2. Visualize the XOR points showing the non-linear structure
-3. Train Linear SVM on XOR data
-4. Calculate accuracy (expected to be ~50% - random chance)
-5. Visualize decision boundary showing poor fit
+Documentation added:
+- Explanation of non-linear separability concept
+- Why XOR is the canonical example of non-linearly separable data
+- Mathematical perspective on linear boundaries
+- Connection to neural network history (Minsky & Papert)
 
-Results show Linear SVM fundamentally cannot solve XOR problem because no linear
-boundary can separate the classes. The model achieves approximately random
-accuracy, demonstrating the critical limitation of linear classifiers on
-non-linearly separable data.
+This analysis provides educational context helping users understand the
+fundamental limitation discovered in the experiment. The XOR problem historically
+motivated the development of multi-layer neural networks.
 
-This motivates the need for non-linear approaches (kernel methods, neural networks).
-
-Verified: Linear SVM fails on XOR as expected, achieving ~50% accuracy.
+Verified: Analysis is technically accurate and pedagogically sound.
