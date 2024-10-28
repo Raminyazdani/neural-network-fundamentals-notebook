@@ -1,15 +1,17 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(docs): add analysis and observations about XOR experiment
+Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(deps): attempt to add PyTorch dependency with typo (OOPS)
 
-Add detailed analysis explaining why Linear SVM fails on XOR problem.
+Attempt to add PyTorch dependency for future work - CONTAINS TYPO.
 
-Documentation added:
-- Explanation of non-linear separability concept
-- Why XOR is the canonical example of non-linearly separable data
-- Mathematical perspective on linear boundaries
-- Connection to neural network history (Minsky & Papert)
+**BUG INTRODUCED:** Added line to requirements.txt:
+  toch>=2.0.0
 
-This analysis provides educational context helping users understand the
-fundamental limitation discovered in the experiment. The XOR problem historically
-motivated the development of multi-layer neural networks.
+Should be:
+  torch>=2.0.0
 
-Verified: Analysis is technically accurate and pedagogically sound.
+This typo (missing 'r') will cause pip install to fail with error:
+  "No matching distribution found for toch"
+
+This is a realistic mistake when quickly editing dependency files. The typo will
+be caught when attempting to install dependencies and fixed in subsequent commits.
+
+Status: Bug present, pip install will fail.
