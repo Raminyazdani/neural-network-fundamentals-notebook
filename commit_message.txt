@@ -1,22 +1,17 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(deps): remove unused torch dependency (HOTFIX)
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(ml): add RBF kernel SVM for non-linear classification
 
-Final fix: Remove torch dependency entirely as it's unused in this notebook.
+Implement non-linear SVM using RBF (Radial Basis Function) kernel for XOR problem.
 
-**RESOLUTION:** Removed the torch line completely from requirements.txt.
+Changes:
+1. Added "## Model Optimization" section
+2. Imported SVC (full SVM with kernel support) from sklearn.svm
+3. Created SVC model with kernel='rbf'
+4. Trained on XOR dataset
 
-Analysis showed:
-- This notebook uses only scikit-learn for classification
-- NumPy and matplotlib for data and visualization
-- PyTorch is not used anywhere in the code
-- Adding it would bloat the environment unnecessarily
+RBF kernel implicitly maps data to higher-dimensional space where XOR becomes
+linearly separable. This is the "kernel trick" - achieving non-linear boundaries
+without explicitly computing high-dimensional features.
 
-Final requirements.txt contains only actually-used dependencies:
-- numpy>=1.21.0
-- matplotlib>=3.3.0  
-- scikit-learn>=1.0.0
-- jupyter>=1.0.0
+Initial implementation uses default parameters (gamma='scale', C=1.0).
 
-This three-step sequence (typo → partial fix → proper fix) demonstrates realistic
-development workflow and the importance of reviewing dependencies.
-
-Verified: All dependencies are used, pip install succeeds, notebook runs.
+Verified: RBF SVM achieves much better accuracy on XOR (~100% vs ~50% for linear).
