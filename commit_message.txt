@@ -1,17 +1,17 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(ml): add RBF kernel SVM for non-linear classification
+Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(ml): test RBF kernel on XOR dataset
 
-Implement non-linear SVM using RBF (Radial Basis Function) kernel for XOR problem.
+Add initial testing and validation for RBF kernel SVM on XOR problem.
 
-Changes:
-1. Added "## Model Optimization" section
-2. Imported SVC (full SVM with kernel support) from sklearn.svm
-3. Created SVC model with kernel='rbf'
-4. Trained on XOR dataset
+Test implementation:
+- Verify RBF model trains without errors
+- Check that accuracy dramatically improves over linear SVM
+- Validate that all 4 XOR points are classified correctly
+- Confirm model convergence
 
-RBF kernel implicitly maps data to higher-dimensional space where XOR becomes
-linearly separable. This is the "kernel trick" - achieving non-linear boundaries
-without explicitly computing high-dimensional features.
+Results confirm RBF kernel successfully solves XOR problem that linear SVM
+couldn't handle. This demonstrates the power of kernel methods for non-linear
+classification tasks.
 
-Initial implementation uses default parameters (gamma='scale', C=1.0).
+Next step will tune parameters and add visualization.
 
-Verified: RBF SVM achieves much better accuracy on XOR (~100% vs ~50% for linear).
+Verified: RBF SVM achieves perfect classification on XOR dataset.
