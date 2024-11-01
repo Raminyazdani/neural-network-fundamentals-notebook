@@ -1,17 +1,18 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(ml): tune RBF kernel parameters for optimal performance
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(viz): visualize RBF kernel decision boundary on XOR
 
-Optimize RBF kernel parameters (gamma and C) for best XOR classification.
+Generate visualization showing RBF kernel's non-linear decision boundary on XOR.
 
-Parameter tuning:
-- gamma='scale' (default): scales by 1/(n_features * X.var())
-- C=1.0: regularization parameter balancing margin vs training errors
+Visualization shows:
+- 4 XOR points: (0,0)→red, (0,1)→blue, (1,0)→blue, (1,1)→red
+- Complex non-linear decision boundary separating classes
+- Circular/curved boundary regions around each point
+- Perfect classification of all points
 
-Tested various parameter combinations:
-- Higher C: stricter on training errors (better for clean data like XOR)
-- Lower gamma: wider RBF influence (appropriate for 4-point XOR)
+The visualization dramatically illustrates the difference between linear and
+non-linear classifiers. Where linear SVM failed, RBF kernel creates curved
+boundaries that perfectly capture the XOR pattern.
 
-Final parameters achieve perfect XOR classification while maintaining good
-generalization properties. The model finds a smooth non-linear boundary that
-correctly separates all XOR points.
+This provides powerful visual proof of kernel methods' capability for non-linear
+problems.
 
-Verified: Optimized parameters yield 100% accuracy on XOR dataset.
+Verified: Visualization clearly shows non-linear boundary successfully solving XOR.
