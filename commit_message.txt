@@ -1,18 +1,20 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(viz): visualize RBF kernel decision boundary on XOR
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(docs): add comprehensive analysis of linear vs non-linear classification
 
-Generate visualization showing RBF kernel's non-linear decision boundary on XOR.
+Document key observations and insights from linear vs non-linear classification experiments.
 
-Visualization shows:
-- 4 XOR points: (0,0)→red, (0,1)→blue, (1,0)→blue, (1,1)→red
-- Complex non-linear decision boundary separating classes
-- Circular/curved boundary regions around each point
-- Perfect classification of all points
+Analysis covers:
+1. Linear separability concept and when linear models work
+2. Why XOR is non-linearly separable and how to recognize such problems
+3. How RBF kernel enables non-linear classification via kernel trick
+4. Comparison of Linear SVM vs RBF SVM performance on different datasets
+5. Practical implications for choosing classification algorithms
 
-The visualization dramatically illustrates the difference between linear and
-non-linear classifiers. Where linear SVM failed, RBF kernel creates curved
-boundaries that perfectly capture the XOR pattern.
+Added sections:
+- "## Observations: Linear vs Non-Linear Classification"
+- "## Decision Boundary Uniqueness"
 
-This provides powerful visual proof of kernel methods' capability for non-linear
-problems.
+Documentation provides educational context tying together all experiments,
+helping users understand fundamental concepts in classification and when to
+apply different approaches.
 
-Verified: Visualization clearly shows non-linear boundary successfully solving XOR.
+Verified: Analysis is technically accurate and provides clear insights.
