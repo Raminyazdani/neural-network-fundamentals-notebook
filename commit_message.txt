@@ -1,20 +1,19 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(docs): add comprehensive analysis of linear vs non-linear classification
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(analysis): implement outlier generation for robustness analysis
 
-Document key observations and insights from linear vs non-linear classification experiments.
+Implement function to add outliers (label noise) to datasets for robustness testing.
 
-Analysis covers:
-1. Linear separability concept and when linear models work
-2. Why XOR is non-linearly separable and how to recognize such problems
-3. How RBF kernel enables non-linear classification via kernel trick
-4. Comparison of Linear SVM vs RBF SVM performance on different datasets
-5. Practical implications for choosing classification algorithms
+Added add_outliers() function:
+- Takes dataset (X, y) and number of outliers to create
+- Randomly selects points and flips their labels
+- Returns noisy dataset with mislabeled points
+- Uses numpy.random for reproducibility
 
-Added sections:
-- "## Observations: Linear vs Non-Linear Classification"
-- "## Decision Boundary Uniqueness"
+Outliers simulate real-world noisy data where some labels are incorrect due to:
+- Measurement errors
+- Human labeling mistakes
+- Inherently ambiguous examples
 
-Documentation provides educational context tying together all experiments,
-helping users understand fundamental concepts in classification and when to
-apply different approaches.
+This enables analysis of how robust different classifiers are to label noise,
+which is a critical practical consideration.
 
-Verified: Analysis is technically accurate and provides clear insights.
+Verified: Function correctly flips specified number of labels randomly.
