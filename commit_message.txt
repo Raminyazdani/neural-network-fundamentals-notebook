@@ -1,19 +1,18 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(analysis): implement outlier generation for robustness analysis
+Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(analysis): test outlier generation function with validation
 
-Implement function to add outliers (label noise) to datasets for robustness testing.
+Test add_outliers() function to verify correct behavior before main usage.
 
-Added add_outliers() function:
-- Takes dataset (X, y) and number of outliers to create
-- Randomly selects points and flips their labels
-- Returns noisy dataset with mislabeled points
-- Uses numpy.random for reproducibility
+Testing includes:
+- Generate clean dataset
+- Add known number of outliers
+- Verify exact number of label flips occurred
+- Check that outliers are distributed randomly
+- Validate data structure remains valid
 
-Outliers simulate real-world noisy data where some labels are incorrect due to:
-- Measurement errors
-- Human labeling mistakes
-- Inherently ambiguous examples
+Testing confirms the outlier generation works as expected and introduces the
+desired level of label noise. The function maintains data integrity while
+creating realistic noisy scenarios.
 
-This enables analysis of how robust different classifiers are to label noise,
-which is a critical practical consideration.
+Ready to proceed with robustness analysis using outlier datasets.
 
-Verified: Function correctly flips specified number of labels randomly.
+Verified: Outlier function works correctly, creates expected label noise.
