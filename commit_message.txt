@@ -1,18 +1,17 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | WIP(analysis): test outlier generation function with validation
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(analysis): integrate outlier generation into main analysis
 
-Test add_outliers() function to verify correct behavior before main usage.
+Apply outlier generation to linearly separable dataset for impact analysis.
 
-Testing includes:
-- Generate clean dataset
-- Add known number of outliers
-- Verify exact number of label flips occurred
-- Check that outliers are distributed randomly
-- Validate data structure remains valid
+Implementation:
+1. Generate linearly separable data
+2. Apply add_outliers() to create 10 mislabeled points (5% of 200 total)
+3. Visualize noisy dataset showing flipped labels
+4. Prepare for training SVM on noisy data
 
-Testing confirms the outlier generation works as expected and introduces the
-desired level of label noise. The function maintains data integrity while
-creating realistic noisy scenarios.
+The visualization clearly shows the outliers - points that appear in the "wrong"
+cluster based on their color. These mislabeled points will challenge the
+classifier to find a robust decision boundary.
 
-Ready to proceed with robustness analysis using outlier datasets.
+Next step will train Linear SVM on this noisy data and analyze the impact.
 
-Verified: Outlier function works correctly, creates expected label noise.
+Verified: Outlier dataset generated and visualized successfully.
