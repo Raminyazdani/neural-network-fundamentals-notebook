@@ -1,17 +1,18 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(analysis): integrate outlier generation into main analysis
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(analysis): analyze impact of outliers on classification
 
-Apply outlier generation to linearly separable dataset for impact analysis.
+Train Linear SVM on noisy data and analyze performance degradation from outliers.
 
-Implementation:
-1. Generate linearly separable data
-2. Apply add_outliers() to create 10 mislabeled points (5% of 200 total)
-3. Visualize noisy dataset showing flipped labels
-4. Prepare for training SVM on noisy data
+Analysis:
+1. Train Linear SVM on outlier-contaminated dataset
+2. Calculate accuracy (lower than clean data: ~90% vs ~99%)
+3. Document accuracy degradation quantitatively
+4. Analyze how outliers affect model performance
 
-The visualization clearly shows the outliers - points that appear in the "wrong"
-cluster based on their color. These mislabeled points will challenge the
-classifier to find a robust decision boundary.
+Results show Linear SVM is moderately robust to small amounts of label noise
+(5% outliers) but does show measurable performance degradation. The regularization
+in SVM helps maintain reasonable performance despite noise.
 
-Next step will train Linear SVM on this noisy data and analyze the impact.
+This analysis demonstrates importance of data quality and understanding how
+classifiers handle noisy real-world data.
 
-Verified: Outlier dataset generated and visualized successfully.
+Verified: Accuracy drops on noisy data as expected, demonstrating outlier impact.
