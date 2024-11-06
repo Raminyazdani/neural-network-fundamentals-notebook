@@ -1,18 +1,18 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(analysis): analyze impact of outliers on classification
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(viz): visualize decision boundary with outliers
 
-Train Linear SVM on noisy data and analyze performance degradation from outliers.
+Generate visualization showing how outliers affect the SVM decision boundary.
 
-Analysis:
-1. Train Linear SVM on outlier-contaminated dataset
-2. Calculate accuracy (lower than clean data: ~90% vs ~99%)
-3. Document accuracy degradation quantitatively
-4. Analyze how outliers affect model performance
+Visualization shows:
+- Data points colored by their (possibly incorrect) labels
+- Decision boundary influenced by outlier points
+- Boundary shifts compared to clean data version
+- Some outliers on wrong side of boundary
 
-Results show Linear SVM is moderately robust to small amounts of label noise
-(5% outliers) but does show measurable performance degradation. The regularization
-in SVM helps maintain reasonable performance despite noise.
+The visualization reveals how the SVM's decision boundary adapts to accommodate
+the mislabeled points. The boundary is "pulled" toward outliers, attempting to
+classify them correctly, which can negatively impact the overall model.
 
-This analysis demonstrates importance of data quality and understanding how
-classifiers handle noisy real-world data.
+This provides intuitive visual understanding of how label noise affects learned
+decision boundaries.
 
-Verified: Accuracy drops on noisy data as expected, demonstrating outlier impact.
+Verified: Visualization clearly shows outlier impact on decision boundary.
