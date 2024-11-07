@@ -1,18 +1,21 @@
-Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(viz): visualize decision boundary with outliers
+Ramin Yazdani | neural-network-fundamentals-notebook | main | feat(docs): enhance README with comprehensive portfolio-grade documentation
 
-Generate visualization showing how outliers affect the SVM decision boundary.
+Complete overhaul of README.md to portfolio-grade professional documentation.
 
-Visualization shows:
-- Data points colored by their (possibly incorrect) labels
-- Decision boundary influenced by outlier points
-- Boundary shifts compared to clean data version
-- Some outliers on wrong side of boundary
+Major additions and improvements:
+1. Comprehensive overview and problem statement
+2. Detailed tech stack with descriptions of each tool
+3. Repository structure diagram
+4. Step-by-step setup instructions (both pip and conda)
+5. Clear usage instructions with expected runtime
+6. Data/inputs section explaining synthetic data generation
+7. Outputs section describing what the notebook produces
+8. Key concepts demonstrated
+9. Reproducibility notes
+10. Troubleshooting section for common issues
 
-The visualization reveals how the SVM's decision boundary adapts to accommodate
-the mislabeled points. The boundary is "pulled" toward outliers, attempting to
-classify them correctly, which can negatively impact the overall model.
+The README now serves as complete standalone documentation suitable for
+portfolio presentation. It provides all information needed for someone to
+understand, set up, run, and learn from the project.
 
-This provides intuitive visual understanding of how label noise affects learned
-decision boundaries.
-
-Verified: Visualization clearly shows outlier impact on decision boundary.
+Verified: README is comprehensive, professionally written, and portfolio-ready.

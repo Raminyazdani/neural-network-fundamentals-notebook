@@ -2,8 +2,10 @@
 
 **Hands-on implementation of fundamental neural network concepts from scratch**
 
+**Stack:** Python, Jupyter Notebook, NumPy, scikit-learn
+
 ## Overview
-This project explores fundamental neural network concepts through practical implementation.
+This project provides a practical exploration of neural network fundamentals through hands-on implementation.
 
 ## Setup
 ```bash
