@@ -1,1 +1,20 @@
 FILE	LOCATOR	BEFORE_SNIPPET	AFTER_SNIPPET	NOTES
+NNTI_Assignment_1.ipynb	cell[0] (markdown)	# NNTI Assignment 1	# Neural Network Fundamentals	Updated title to remove assignment reference
+NNTI_Assignment_1.ipynb	cell[1] (markdown)	Name: Syed Rumman Ali\nStudent ID: 7072982\nEmail: rusy00001@stud.uni-saarland.de	[REMOVED]	Deleted student info cell
+NNTI_Assignment_1.ipynb	cell[2] (markdown)	Name: Ramin Yazdani\nStudent ID: 7068679\nEmail: raya00001@stud.uni-saarland.de	[REMOVED]	Deleted student info cell
+NNTI_Assignment_1.ipynb	cell[3] (markdown)	Name: Gopal Mengi\nStudent ID: 7071538\nEmail: gome00002@stud.uni-saarland.de	[REMOVED]	Deleted student info cell
+NNTI_Assignment_1.ipynb	cell[4] (markdown)	1. Write a function to generate two sets of points...	## Linearly Separable Data Generation\n\nGenerate two clusters of points...	Reframed from assignment instruction to professional documentation
+NNTI_Assignment_1.ipynb	cell[6] (markdown)	2. Write a function to similarly generate the XOR dataset...	## XOR Dataset Generation\n\nGenerate the XOR dataset...	Removed exercise numbering and reframed professionally
+NNTI_Assignment_1.ipynb	cell[8] (markdown)	Write a function to visualise...	## Data Visualization\n\nVisualize the clusters and their labels...	Removed assignment imperative tone
+NNTI_Assignment_1.ipynb	cell[10] (markdown)	This exercise will use the scikit-learn library...	## Linear SVM Classification\n\nUsing scikit-learn to find a decision boundary...	Removed "exercise" language and reframed
+NNTI_Assignment_1.ipynb	cell[15] (markdown)	Write a function to visualise the decision boundary...	## Decision Boundary Visualization\n\nVisualize the decision boundary...	Removed assignment imperative tone
+NNTI_Assignment_1.ipynb	cell[17] (markdown)	Optimise the model and visualise...	## Model Optimization\n\nOptimize the model and visualize...	Reframed professionally with section header
+NNTI_Assignment_1.ipynb	cell[19] (markdown)	#### Explain your observations from Exercise 2...	## Observations: Linear vs Non-Linear Classification	Removed "Exercise 2" reference and elevated to main section
+NNTI_Assignment_1.ipynb	cell[20] (markdown)	#### Is this decision boundary unique ?	## Decision Boundary Uniqueness	Reframed as section title instead of question
+NNTI_Assignment_1.ipynb	cell[21] (markdown)	#### Create some outliers by flipping...	## Impact of Outliers on Decision Boundary	Reframed professionally as section header
+NNTI_Assignment_1.ipynb	filename	NNTI_Assignment_1.ipynb	neural_network_fundamentals.ipynb	Renamed file to remove NNTI/Assignment references
+README.md	line 39-40	cd Submission_1_-_7072982_Syed_Rumman_Ali\njupyter notebook NNTI_Assignment_1.ipynb	jupyter notebook neural_network_fundamentals.ipynb	Updated run command to new filename, removed submission directory
+README.md	entire file	[old content]	[new comprehensive portfolio-grade README]	Complete rewrite to portfolio standards with detailed sections
+requirements.txt	line 1-2	torch>=2.0.0\ntorchvision>=0.15.0	[REMOVED]	Removed unused PyTorch dependencies
+requirements.txt	line 4	[missing]	scikit-learn>=1.0.0	Added scikit-learn (actually used in notebook)
+

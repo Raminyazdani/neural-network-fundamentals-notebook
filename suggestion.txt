@@ -1,1 +1,16 @@
 TYPE	FILE	LOCATOR	BEFORE_SNIPPET	PROPOSED_CHANGE	RATIONALE	STATUS
+TRACE	NNTI_Assignment_1.ipynb	cell[0] (markdown)	# NNTI Assignment 1	# Neural Network Fundamentals	Remove assignment reference from title	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[1] (markdown)	Name: Syed Rumman Ali\nStudent ID: 7072982\nEmail: rusy00001@stud.uni-saarland.de	[Remove entire cell]	Remove student identification information	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[2] (markdown)	Name: Ramin Yazdani\nStudent ID: 7068679\nEmail: raya00001@stud.uni-saarland.de	[Remove entire cell]	Remove student identification information	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[3] (markdown)	Name: Gopal Mengi\nStudent ID: 7071538\nEmail: gome00002@stud.uni-saarland.de	[Remove entire cell]	Remove student identification information	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[4] (markdown)	1. Write a function to generate...	Generate two linearly separable clusters...	Remove exercise numbering and assignment tone	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[6] (markdown)	2. Write a function to similarly generate the XOR dataset...	Generate XOR dataset...	Remove exercise numbering and assignment tone	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[8] (markdown)	Write a function to visualise...	Visualize data clusters...	Remove assignment tone (imperative commands)	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[10] (markdown)	This exercise will use...	Training linear SVM for classification...	Remove "exercise" language	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[15] (markdown)	Write a function to visualise the decision boundary...	Decision boundary visualization...	Remove assignment tone	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[17] (markdown)	Optimise the model and visualise...	Model optimization and visualization...	Remove assignment tone	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[19] (markdown)	#### Explain your observations from Exercise 2...	#### Observations: Linear vs Non-Linear Classification...	Remove "Exercise 2" reference	APPLIED
+TRACE	NNTI_Assignment_1.ipynb	cell[21] (markdown)	#### Create some outliers by flipping...	#### Impact of Outliers on Decision Boundary...	Remove assignment tone	APPLIED
+RENAME	NNTI_Assignment_1.ipynb	filename	NNTI_Assignment_1.ipynb	neural_network_fundamentals.ipynb	Rename to professional portfolio name (remove NNTI/Assignment)	APPLIED
+DOC	README.md	line 39-40	cd Submission_1_-_7072982_Syed_Rumman_Ali\njupyter notebook NNTI_Assignment_1.ipynb	jupyter notebook neural_network_fundamentals.ipynb	Update run instructions to reflect new filename and remove submission directory reference	APPLIED
+
