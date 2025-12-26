@@ -1,16 +1,19 @@
 # Neural Network Fundamentals
 
-**Hands-on implementation of fundamental neural network concepts**
+A practical exploration of neural network fundamentals through hands-on implementation.
+
+## Progress
+
+- Initial setup complete
+- Added linearly separable data generation
+- Added XOR dataset generation
 
 ## Overview
 
-This project implements fundamental concepts for generating and visualizing classification datasets.
-
-## Features
-
-- Linearly separable 2D data generation
-- XOR dataset generation
-- Data visualization with matplotlib
+This project demonstrates fundamental concepts in neural networks including:
+- Data generation for classification tasks (linear and non-linear)
+- Linear separability
+- XOR problem
 
 ## Setup
 

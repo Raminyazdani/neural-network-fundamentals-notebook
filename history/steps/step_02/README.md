@@ -1,15 +1,18 @@
 # Neural Network Fundamentals
 
-**Hands-on implementation of fundamental neural network concepts**
+A practical exploration of neural network fundamentals through hands-on implementation.
+
+## Progress
+
+- Initial setup complete
+- Added linearly separable data generation function
 
 ## Overview
 
-This project implements fundamental concepts for generating classification datasets, including linearly separable data and XOR datasets.
-
-## Features (Work in Progress)
-
-- Linearly separable 2D data generation
-- XOR dataset generation
+This project demonstrates fundamental concepts in neural networks including:
+- Data generation for classification tasks
+- Linear separability
+- Decision boundaries
 
 ## Setup
 
@@ -17,3 +20,11 @@ This project implements fundamental concepts for generating classification datas
 pip install -r requirements.txt
 jupyter notebook neural_network_fundamentals.ipynb
 ```
+
+## Tech Stack
+
+- Python 3.x
+- NumPy
+- Matplotlib  
+- scikit-learn
+- Jupyter Notebook

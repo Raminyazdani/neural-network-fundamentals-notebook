@@ -1,19 +1,11 @@
 # Neural Network Fundamentals
 
-**Hands-on implementation of fundamental neural network concepts**
+## Progress
 
-## Overview
-
-Complete implementation with outlier impact analysis.
-
-## Features
-
-- Data generation
-- Visualization
-- SVM classification (linear and kernel-based)
-- Decision boundary visualization
-- Model analysis
-- Outlier impact study
+- Data generation complete
+- Visualization working
+- Linear SVM implemented
+- Decision boundary visualization function added
 
 ## Setup
 
