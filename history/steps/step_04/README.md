@@ -1,16 +1,16 @@
 # Neural Network Fundamentals
 
-A practical exploration of neural network fundamentals through hands-on implementation.
+**Hands-on implementation of fundamental neural network concepts from scratch**
 
-## Progress
-
-- Initial setup complete
-- Data generation functions implemented
-- Added data visualization (debugging import issue)
+## Overview
+This project explores fundamental neural network concepts through practical implementation.
 
 ## Setup
-
 ```bash
 pip install -r requirements.txt
+```
+
+## How to Run
+```bash
 jupyter notebook neural_network_fundamentals.ipynb
 ```
