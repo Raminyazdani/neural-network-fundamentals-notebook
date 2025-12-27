@@ -1,17 +1,12 @@
 # Neural Network Fundamentals
 
-**Hands-on implementation of fundamental neural network concepts**
+A practical exploration of neural network fundamentals through hands-on implementation.
 
-## Overview
+## Progress
 
-This project explores linear classification and decision boundary visualization.
-
-## Features
-
-- Data generation (linearly separable and XOR)
-- Data visualization
-- Linear SVM classification
-- Decision boundary visualization
+- Initial setup complete
+- Data generation functions implemented
+- Data visualization working correctly (fixed import issue)
 
 ## Setup
 

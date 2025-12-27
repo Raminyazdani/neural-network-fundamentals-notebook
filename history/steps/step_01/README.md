@@ -1,30 +1,14 @@
 # Neural Network Fundamentals
 
-**Hands-on implementation of fundamental neural network concepts**
-
-**Stack:** Python, Jupyter Notebook, NumPy, scikit-learn
+A practical exploration of neural network fundamentals through hands-on implementation.
 
 ## Overview
 
-This project explores fundamental neural network concepts through practical implementations. It focuses on understanding linear separability, classification algorithms, and decision boundaries.
-
-## Problem & Approach
-
-**Problem:** Understanding how neural networks and classification algorithms work requires hands-on experience with basic concepts.
-
-**Approach:**
-- Generate synthetic datasets for classification
-- Implement visualization techniques
-- Apply machine learning algorithms
-- Analyze model behavior and limitations
-
-## Tech Stack
-
-- Python 3.x
-- NumPy - numerical computations
-- Matplotlib - visualization
-- scikit-learn - machine learning algorithms
-- Jupyter Notebook - interactive development
+This project will demonstrate fundamental concepts in neural networks including:
+- Data generation for classification tasks
+- Linear separability
+- Decision boundaries
+- Model limitations
 
 ## Setup
 
@@ -32,12 +16,10 @@ This project explores fundamental neural network concepts through practical impl
 pip install -r requirements.txt
 ```
 
-## How to Run
+## Tech Stack
 
-```bash
-jupyter notebook neural_network_fundamentals.ipynb
-```
-
-## Notes
-
-This project is under active development.
+- Python 3.x
+- NumPy
+- Matplotlib
+- scikit-learn
+- Jupyter Notebook

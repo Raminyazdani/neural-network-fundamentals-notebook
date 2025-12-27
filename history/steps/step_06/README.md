@@ -1,18 +1,11 @@
 # Neural Network Fundamentals
 
-**Hands-on implementation of fundamental neural network concepts**
+## Progress
 
-## Overview
-
-Complete implementation of linear and non-linear classification with analysis.
-
-## Features
-
-- Data generation (linearly separable and XOR)
-- Data visualization
-- Linear and kernel-based SVM classification
-- Decision boundary visualization
-- Model comparison and analysis
+- Data generation complete
+- Visualization working
+- Linear SVM classification implemented
+- Training and prediction working
 
 ## Setup
 

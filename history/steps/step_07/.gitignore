@@ -26,6 +26,7 @@ wheels/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*_executed.ipynb
 
 # Environments
 .env

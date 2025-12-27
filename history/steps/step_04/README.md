@@ -1,17 +1,12 @@
 # Neural Network Fundamentals
 
-**Hands-on implementation of fundamental neural network concepts**
+A practical exploration of neural network fundamentals through hands-on implementation.
 
-## Overview
+## Progress
 
-This project explores linear classification using SVM on different types of datasets.
-
-## Features
-
-- Linearly separable 2D data generation
-- XOR dataset generation
-- Data visualization
-- Linear SVM classification
+- Initial setup complete
+- Data generation functions implemented
+- Added data visualization (debugging import issue)
 
 ## Setup
 
