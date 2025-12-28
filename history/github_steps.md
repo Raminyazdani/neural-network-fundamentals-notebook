@@ -1,38 +1,50 @@
 # Git Development History: Neural Network Fundamentals
 
-## History Expansion Note
+## History Expansion Note (v3)
 
-This historian run expands the previous 9-step history into a more granular 14-step development timeline.
+This historian run expands the previous 14-step history into a more granular 21-step development timeline, meeting the requirement of at least 1.5× expansion.
 
 **Expansion Metrics:**
-- **N_old:** 9 steps (previous run)
-- **N_new:** 14 steps (current run)
-- **Target:** ceil(9 × 1.5) = 14 steps (minimum required)
-- **Achieved multiplier:** 14 / 9 = 1.56× ✓
+- **N_old:** 14 steps (previous v2 run)
+- **N_target:** ceil(14 × 1.5) = 21 steps (minimum required)
+- **N_achieved:** 21 steps ✓
+- **Achieved multiplier:** 21 / 14 = **1.50×** (exactly meets requirement)
 
-**Mapping from Old Steps to New Steps:**
+**Mapping from Old Steps (v2) to New Steps (v3):**
 
 | Old Step | Old Summary | New Steps | New Summary |
 |----------|-------------|-----------|-------------|
-| 01 | Initial setup | 01 | Initial repository setup (same) |
-| 02 | Data generation | 02-03 | Split into: linearly separable (02), XOR dataset (03) |
-| 03 | Data visualization | 04-05 | **OOPS→HOTFIX sequence:** wrong import (04), fix import (05) |
-| 04 | Linear SVM | 06 | Linear SVM implementation (same) |
-| 05 | Decision boundaries | 07-08 | Split into: visualization function (07), application (08) |
-| 06 | Model optimization | 09-10 | Split into: RBF kernel addition (09), analysis docs (10) |
-| 07 | Outlier analysis | 11-12 | Split into: outlier generation (11), impact analysis (12) |
-| 08 | Documentation | 13 | Documentation enhancement (same) |
-| 09 | Portfolio refinement | 14 | Final portfolio refinement (same) |
+| 01 | Initial repository setup | 01 | Initial repository setup (unchanged) |
+| 02 | Linearly separable data | 02-03 | Split: scaffold (02) + implementation (03) |
+| 03 | XOR dataset | 04 | XOR dataset generation (unchanged) |
+| 04 | Data visualization (OOPS) | 05 | Data visualization with wrong import (OOPS) |
+| 05 | Fix matplotlib import (HOTFIX) | 06 | Fix matplotlib import (HOTFIX) |
+| 06 | Linear SVM | 07-08 | Split: import sklearn (07) + implementation (08) |
+| 07 | Visualization function | 09 | Decision boundary function (unchanged) |
+| 08 | Application | 10-11 | Split: basic viz (10) + enhanced XOR (11) |
+| — | **NEW** | 12-13 | **NEW OOPS→HOTFIX:** typo in requirements.txt (12) + fix (13) |
+| 09 | RBF kernel | 14-15 | Split: kernel addition (14) + parameter tuning (15) |
+| 10 | Analysis documentation | 16 | Analysis documentation (unchanged) |
+| 11 | Outlier generation | 17-18 | Split: outlier logic (17) + integration (18) |
+| 12 | Impact analysis | 19 | Outlier impact analysis (unchanged) |
+| 13 | Documentation | 20 | Documentation enhancement (unchanged) |
+| 14 | Portfolio refinement | 21 | Final portfolio refinement (unchanged) |
 
-**OOPS→HOTFIX Sequence (Steps 04-05):**
+**OOPS→HOTFIX Sequences:**
 
-In step 04, we introduce a realistic development mistake:
-- **What broke:** The data visualization code included a wrong matplotlib import (`from matplotlib import plot` instead of using `pyplot`)
-- **How noticed:** When running the notebook, this would cause issues with the plotting functions since `plot` is not the correct module to import
-- **How fixed:** Step 05 immediately corrects the import statement to use proper matplotlib conventions
-- **Why realistic:** Import path mistakes are common when quickly implementing visualization code, especially when working with matplotlib's various submodules
+This expansion includes **TWO** oops→hotfix pairs to demonstrate realistic development workflow:
 
-This oops→hotfix pair demonstrates real development workflow where small mistakes are caught and fixed incrementally, rather than assuming perfect code on the first try.
+1. **Steps 05-06 (Matplotlib Import Error):**
+   - **What broke (Step 05):** Used wrong matplotlib import (`from matplotlib import plot` instead of `import matplotlib.pyplot as plt`)
+   - **How noticed:** This would cause AttributeError when trying to use pyplot functions
+   - **How fixed (Step 06):** Corrected to standard matplotlib convention using `import matplotlib.pyplot as plt`
+   - **Why realistic:** Import path mistakes are common when quickly implementing visualization code
+
+2. **Steps 12-13 (Dependency Typo - NEW):**
+   - **What broke (Step 12):** Typo in requirements.txt (`toch>=2.0.0` instead of `torch>=2.0.0`)
+   - **How noticed:** Would cause pip install failure with "No matching distribution found for toch"
+   - **How fixed (Step 13):** Removed the unnecessary torch dependency entirely (not used in this notebook)
+   - **Why realistic:** Typos in dependency files are common, especially when adding/removing packages quickly
 
 ---
 
@@ -45,13 +57,13 @@ This oops→hotfix pair demonstrates real development workflow where small mista
 **Summary:**
 - Created repository with basic structure
 - Added README.md with project overview
-- Created requirements.txt with initial dependencies
+- Created requirements.txt with initial dependencies (numpy, matplotlib, jupyter)
 - Added .gitignore for Python projects
 - Established project foundation
 
-**Files:**
+**Files Created:**
 - README.md (initial version with overview)
-- requirements.txt (numpy, matplotlib, scikit-learn, jupyter)
+- requirements.txt (numpy>=1.21.0, matplotlib>=3.3.0, jupyter>=1.0.0)
 - .gitignore (Python standard ignores)
 
 **Changes:**
@@ -61,32 +73,54 @@ This oops→hotfix pair demonstrates real development workflow where small mista
 
 ---
 
-### Step 02: Linearly Separable Data Generation
-**Commit:** "Implement linearly separable data generation"  
-**Date:** 2024-10-16
+### Step 02: Linearly Separable Data - Scaffold
+**Commit:** "Add scaffold for linearly separable data generation"  
+**Date:** 2024-10-16 (morning)
 
 **Summary:**
-- Added function to generate linearly separable 2D clusters
-- Uses NumPy for data creation with Gaussian distribution
-- Generates two clusters that can be separated by a linear boundary
-- Set up notebook structure with initial cells
+- Created initial notebook structure
+- Added title and section headers
+- Set up markdown documentation for data generation
+- Prepared structure for implementation
 
 **Added:**
-- neural_network_fundamentals.ipynb
-  - Title cell
-  - Linearly Separable Data Generation section (markdown)
-  - Data generation function (code cell)
+- neural_network_fundamentals.ipynb (initial cells)
+  - Title cell: "# Neural Network Fundamentals"
+  - Section header: "## Linearly Separable Data Generation"
+  - Description of what will be implemented
 
 **Changes:**
-- Created notebook file
-- Implemented `generate_linearly_separable_data()` function
-- Added 100 points per cluster with controllable separation
+- Created notebook file with foundational structure
+- 2 markdown cells (title + section)
 
 ---
 
-### Step 03: XOR Dataset Generation
+### Step 03: Linearly Separable Data - Implementation
+**Commit:** "Implement linearly separable data generation function"  
+**Date:** 2024-10-16 (afternoon)
+
+**Summary:**
+- Implemented function to generate linearly separable 2D clusters
+- Uses NumPy for data creation with Gaussian distribution
+- Generates two clusters that can be separated by a linear boundary
+- Added imports and complete implementation
+
+**Updated:**
+- neural_network_fundamentals.ipynb
+  - Added imports (numpy, matplotlib.pyplot)
+  - Implemented `generate_linearly_separable_data()` function
+  - Function creates 100 points per cluster with controllable separation
+  - Returns X (features) and y (labels)
+
+**Changes:**
+- Added code cell with data generation implementation
+- 3 cells total (2 markdown, 1 code)
+
+---
+
+### Step 04: XOR Dataset Generation
 **Commit:** "Add XOR dataset generation"  
-**Date:** 2024-10-16
+**Date:** 2024-10-16 (evening)
 
 **Summary:**
 - Implemented XOR dataset generation
@@ -96,337 +130,438 @@ This oops→hotfix pair demonstrates real development workflow where small mista
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Added XOR Dataset Generation section (markdown)
-  - Added XOR generation function (code cell)
+  - Added "## XOR Dataset Generation" section (markdown)
+  - Implemented `generate_xor_data()` function (code)
+  - Creates the 4 XOR points: (0,0)→0, (0,1)→1, (1,0)→1, (1,1)→0
 
 **Changes:**
-- Implemented `generate_xor_data()` function
-- Returns 4 points: (0,0), (0,1), (1,0), (1,1) with XOR labels
-- Foundation for demonstrating non-linear classification challenges
+- Added 2 cells (1 markdown, 1 code)
+- 5 cells total
 
 ---
 
-### Step 04: Data Visualization (with Import Bug)
-**Commit:** "Add data visualization function - WIP"  
-**Date:** 2024-10-17
+### Step 05: Data Visualization - OOPS (Wrong Import)
+**Commit:** "Add data visualization function (WIP)"  
+**Date:** 2024-10-17 (morning)
 
 **Summary:**
-- Created visualization function for data clusters
-- Uses matplotlib to plot points with different colors for each class
-- **BUG INTRODUCED:** Incorrect matplotlib import statement
-- Import error would prevent proper execution
+- Added visualization function to display 2D data points
+- **BUG INTRODUCED:** Used incorrect matplotlib import
+- Function implementation is correct but import statement is wrong
+- Would cause runtime error when executed
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Added Data Visualization section (markdown)
-  - Added plot_data() function (code cell)
+  - Added "## Data Visualization" section (markdown)
+  - Added `visualize_data()` function with scatter plots
+  - **MISTAKE:** Used `from matplotlib import plot` (wrong module)
+  - Function includes: figure creation, scatter plots, labels, legend, grid
 
 **Changes:**
-- Implemented `plot_data()` function with scatter plots
-- Color-coded visualization (blue for class 0, red for class 1)
-- **OOPS:** Used `from matplotlib import plot` (incorrect)
-- Should use `import matplotlib.pyplot as plt` (standard convention)
-
-**Bug Details:**
-- Wrong import: `from matplotlib import plot`
-- This would cause AttributeError when trying to use plotting functions
-- Common mistake when quickly implementing visualization code
+- Added 2 cells (1 markdown, 1 code)
+- 7 cells total
+- **Note:** This step contains a deliberate bug (wrong import)
 
 ---
 
-### Step 05: Fix Matplotlib Import Issue
-**Commit:** "Hotfix: correct matplotlib import statement"  
-**Date:** 2024-10-17
+### Step 06: Fix Matplotlib Import - HOTFIX
+**Commit:** "Fix matplotlib import statement"  
+**Date:** 2024-10-17 (late morning)
 
 **Summary:**
-- Fixed matplotlib import issue from previous commit
-- Corrected to use standard pyplot import convention
-- Visualization now works correctly
-- Quick fix applied after testing revealed the import error
+- Fixed matplotlib import error discovered during testing
+- Changed to proper matplotlib.pyplot convention
+- All plotting functions now work correctly
+- Quick hotfix after noticing the import issue
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Fixed import statements in plot_data() function (code cell)
+  - **FIXED:** Changed `from matplotlib import plot` to `import matplotlib.pyplot as plt`
+  - Visualization function now uses correct matplotlib API
+  - All other code remains the same
 
 **Changes:**
-- **FIXED:** Removed incorrect `from matplotlib import plot`
-- Confirmed correct usage of `import matplotlib.pyplot as plt`
-- All plotting functions now work as expected
-- Visualization tested and working
-
-**Fix Details:**
-- Identified issue during notebook execution
-- Applied standard matplotlib import pattern
-- Verified plot_data() works with both datasets
+- Fixed 1 line in code cell
+- 7 cells total (bug resolved)
 
 ---
 
-### Step 06: Linear SVM Classification Implementation
-**Commit:** "Implement Linear SVM for classification"  
-**Date:** 2024-10-18
+### Step 07: Linear SVM - Import sklearn
+**Commit:** "Add scikit-learn import for SVM"  
+**Date:** 2024-10-17 (afternoon)
 
 **Summary:**
-- Added scikit-learn LinearSVC for linear classification
-- Trained models on both linearly separable and XOR datasets
-- Demonstrated that linear models work for linearly separable data
-- Showed limitation on XOR (non-linearly separable) data
-- Added multiple training examples and prediction code
+- Added scikit-learn to dependencies
+- Imported LinearSVC for classification
+- Set up section for SVM implementation
+- Prepared for model training
+
+**Updated:**
+- requirements.txt
+  - Added scikit-learn>=1.0.0
+- neural_network_fundamentals.ipynb
+  - Added "## Linear SVM Classification" section (markdown)
+  - Added import statement: `from sklearn.svm import LinearSVC`
+
+**Changes:**
+- Updated requirements.txt (added sklearn)
+- Added 2 cells to notebook (1 markdown, 1 code with import)
+- 9 cells total
+
+---
+
+### Step 08: Linear SVM - Implementation
+**Commit:** "Implement Linear SVM classification"  
+**Date:** 2024-10-17 (late afternoon)
+
+**Summary:**
+- Generated linearly separable data and visualized it
+- Trained Linear SVM classifier on the data
+- Calculated and displayed accuracy
+- Completed basic classification pipeline
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Added Linear SVM Classification section (markdown)
-  - Added LinearSVC training code (4 code cells)
-  - Training examples for both datasets
-  - Prediction demonstrations
+  - Generated data using `generate_linearly_separable_data()`
+  - Visualized data with `visualize_data()`
+  - Trained LinearSVC model
+  - Printed accuracy score
 
 **Changes:**
-- Imported `LinearSVC` from sklearn.svm
-- Trained model on linearly separable data
-- Trained model on XOR data
-- Added prediction examples
-- Demonstrated model performance on both problems
+- Updated code cell with full SVM training pipeline
+- 9 cells total (implementation complete)
 
 ---
 
-### Step 07: Decision Boundary Visualization Function
+### Step 09: Decision Boundary Visualization Function
 **Commit:** "Add decision boundary visualization function"  
-**Date:** 2024-10-19
+**Date:** 2024-10-18 (morning)
 
 **Summary:**
-- Created function to visualize decision boundaries
-- Shows how the model separates the data
-- Creates contour plots overlaid on scatter plots
-- Provides visual understanding of model behavior
+- Implemented comprehensive decision boundary plotting
+- Uses meshgrid to create dense grid of points
+- Predicts class for each point to show boundary
+- Visualizes with contour plot and scatter
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Added Decision Boundary Visualization section (markdown)
-  - Added plot_decision_boundary() function (code cell)
+  - Added "## Decision Boundary Visualization" section (markdown)
+  - Implemented `plot_decision_boundary()` function
+  - Function creates 2D mesh, predicts on grid, plots contour
 
 **Changes:**
-- Implemented `plot_decision_boundary()` function
-- Uses meshgrid to create decision boundary contours
-- Overlays data points on boundary visualization
-- Shows classification regions in different colors
+- Added 2 cells (1 markdown, 1 code)
+- 11 cells total
 
 ---
 
-### Step 08: Apply Decision Boundaries to Datasets
-**Commit:** "Visualize decision boundaries for all datasets"  
-**Date:** 2024-10-19
+### Step 10: Apply Decision Boundary Visualization - Basic
+**Commit:** "Visualize decision boundary for linear data"  
+**Date:** 2024-10-18 (late morning)
 
 **Summary:**
-- Applied decision boundary visualization to datasets
-- Visualized linear model behavior on linearly separable data
-- Visualized linear model limitations on XOR data
-- Demonstrated clear separation for linear case
-- Showed inability to solve XOR with linear boundary
+- Applied decision boundary visualization to linearly separable data
+- Shows how Linear SVM creates clean separation
+- Demonstrates successful classification on linear problem
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Same cells as step 07 (application is logical next step)
-  - Focus on applying and interpreting results
+  - Added code to visualize decision boundary for linear SVM
+  - Call: `plot_decision_boundary(X_linear, y_linear, svm_linear, ...)`
 
 **Changes:**
-- Executed decision boundary visualizations
-- Analyzed linear boundary success and failures
-- Documented visual observations
-- Prepared groundwork for model comparison
+- Added 1 code cell
+- 12 cells total
 
 ---
 
-### Step 09: Model Optimization - Add RBF Kernel
-**Commit:** "Add RBF kernel SVM for non-linear classification"  
-**Date:** 2024-10-20
+### Step 11: Apply to XOR - Enhanced
+**Commit:** "Apply Linear SVM to XOR dataset"  
+**Date:** 2024-10-18 (afternoon)
 
 **Summary:**
-- Compared Linear SVM with kernel-based SVM (RBF)
-- Added SVC with RBF kernel for non-linear problems
-- Demonstrated superior performance on XOR dataset
-- Showed kernel methods can handle non-linear separability
+- Generated XOR dataset and visualized it
+- Attempted Linear SVM on XOR (non-linear problem)
+- Demonstrated limitation: poor accuracy on XOR
+- Visualized decision boundary showing linear limitation
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Added Model Optimization section (markdown)
-  - Added SVC with RBF kernel code (code cell)
+  - Generated XOR data
+  - Trained Linear SVM on XOR
+  - Printed accuracy (low, as expected)
+  - Visualized poor decision boundary
 
 **Changes:**
-- Imported `SVC` from sklearn.svm
-- Trained RBF kernel SVM on XOR data
-- Compared linear vs kernel performance
-- Demonstrated kernel trick for non-linear classification
+- Added 1 code cell with XOR experiment
+- 13 cells total
 
 ---
 
-### Step 10: Comparative Analysis Documentation
-**Commit:** "Document observations on linear vs non-linear classification"  
-**Date:** 2024-10-20
+### Step 12: Wrong Dependency - OOPS (Typo in requirements.txt)
+**Commit:** "Update dependencies for advanced models"  
+**Date:** 2024-10-18 (late afternoon)
 
 **Summary:**
-- Added comprehensive analysis of model behavior
-- Documented observations about linear classification limits
-- Explored decision boundary uniqueness
-- Discussed when linear models work vs when they fail
+- Attempted to add PyTorch dependency for future work
+- **BUG INTRODUCED:** Typo in package name (`toch` instead of `torch`)
+- Would cause pip install to fail
+- Realistic mistake when quickly editing dependency file
+
+**Updated:**
+- requirements.txt
+  - Added line: `toch>=2.0.0` (typo - should be `torch`)
+  - **MISTAKE:** Package name misspelled
+
+**Changes:**
+- Updated requirements.txt (with typo)
+- **Note:** This step contains a deliberate bug
+
+---
+
+### Step 13: Fix Dependency - HOTFIX
+**Commit:** "Fix requirements.txt - remove unused torch dependency"  
+**Date:** 2024-10-18 (evening)
+
+**Summary:**
+- Noticed typo in requirements.txt during pip install
+- Realized torch is not actually needed for this notebook
+- Removed the incorrect dependency line entirely
+- Quick fix to unblock development
+
+**Updated:**
+- requirements.txt
+  - **FIXED:** Removed the typo line (`toch>=2.0.0`)
+  - Final dependencies: numpy, matplotlib, scikit-learn, jupyter
+  - All dependencies are actually used in the notebook
+
+**Changes:**
+- Fixed requirements.txt (removed typo)
+- Clean dependency list
+
+---
+
+### Step 14: RBF Kernel Addition
+**Commit:** "Add RBF kernel SVM for XOR"  
+**Date:** 2024-10-19 (morning)
+
+**Summary:**
+- Added non-linear SVM using RBF kernel
+- Imported SVC (full SVM with kernel support)
+- Trained on XOR dataset to show improvement
+- Initial implementation without parameter tuning
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Added Observations: Linear vs Non-Linear Classification section
-  - Added Decision Boundary Uniqueness section
+  - Added "## Model Optimization" section (markdown)
+  - Imported `from sklearn.svm import SVC`
+  - Trained RBF SVM on XOR: `SVC(kernel='rbf')`
+  - Printed accuracy (much better than linear)
 
 **Changes:**
-- Documented key observations:
-  - Linear models perfect for linearly separable data
-  - Linear models fail on XOR (non-linear) problem
-  - Kernel methods solve non-linear problems
-- Discussed decision boundary uniqueness
-- Added theoretical context for practical results
+- Added 2 cells (1 markdown, 1 code)
+- 15 cells total
 
 ---
 
-### Step 11: Outlier Generation Implementation
-**Commit:** "Implement outlier generation by class flipping"  
-**Date:** 2024-10-21
+### Step 15: RBF Parameter Tuning
+**Commit:** "Tune RBF kernel parameters and visualize"  
+**Date:** 2024-10-19 (late morning)
 
 **Summary:**
-- Implemented outlier generation by class label flipping
-- Creates noisy datasets to test model robustness
-- Flips some class labels to create misclassified points
-- Prepares for robustness analysis
+- Added explicit parameters to RBF kernel (gamma, C)
+- Optimized for XOR problem
+- Visualized decision boundary showing perfect separation
+- Demonstrated power of non-linear kernels
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Added Impact of Outliers on Decision Boundary section
+  - Updated RBF SVM with parameters: `gamma='scale', C=1.0`
+  - Added decision boundary visualization for RBF on XOR
+  - Shows complex non-linear boundary that perfectly separates XOR
 
 **Changes:**
-- Added code to flip class labels randomly
-- Created outlier-contaminated datasets
-- Prepared for analyzing model sensitivity to noise
-- Foundation for robustness testing
+- Updated code cell with parameters and visualization
+- 15 cells total
 
 ---
 
-### Step 12: Outlier Impact Analysis
-**Commit:** "Analyze impact of outliers on decision boundaries"  
-**Date:** 2024-10-21
+### Step 16: Analysis Documentation
+**Commit:** "Add observations on linear vs non-linear classification"  
+**Date:** 2024-10-19 (afternoon)
 
 **Summary:**
-- Analyzed how outliers affect the decision boundary
-- Demonstrated model robustness (or lack thereof)
-- Visualized boundary changes with noisy data
-- Completed core functionality and analysis
+- Documented key observations from experiments
+- Explained when linear models work vs fail
+- Described power of non-linear kernels
+- Provided insights for understanding
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Same cells as step 11 (analysis is logical next step)
-  - Focus on interpreting outlier impact
+  - Added "## Observations: Linear vs Non-Linear Classification" section
+  - Documented: Linear models work for linearly separable data
+  - Documented: Non-linear kernels (RBF) handle complex boundaries
+  - Explained XOR as classic non-linear problem
 
 **Changes:**
-- Trained models on outlier-contaminated data
-- Visualized decision boundary changes
-- Analyzed model sensitivity to noise
-- Documented robustness observations
-- Completed all core technical work
+- Added 1 markdown cell
+- 16 cells total
 
 ---
 
-### Step 13: Documentation Enhancement
+### Step 17: Outlier Generation Logic
+**Commit:** "Implement outlier generation function"  
+**Date:** 2024-10-20 (morning)
+
+**Summary:**
+- Created function to add outliers to dataset
+- Outliers generated by flipping labels randomly
+- Simulates noisy/mislabeled data
+- Prepared for robustness analysis
+
+**Updated:**
+- neural_network_fundamentals.ipynb
+  - Added "## Impact of Outliers on Decision Boundary" section
+  - Implemented `add_outliers()` function
+  - Function randomly flips n labels to create noise
+
+**Changes:**
+- Added 2 cells (1 markdown, 1 code)
+- 18 cells total
+
+---
+
+### Step 18: Outlier Integration
+**Commit:** "Generate and visualize data with outliers"  
+**Date:** 2024-10-20 (late morning)
+
+**Summary:**
+- Applied outlier generation to linearly separable data
+- Created dataset with 10 flipped labels
+- Visualized noisy dataset
+- Set up for impact analysis
+
+**Updated:**
+- neural_network_fundamentals.ipynb
+  - Generated data with outliers using `add_outliers()`
+  - Visualized noisy dataset
+  - Shows some misclassified points (flipped labels)
+
+**Changes:**
+- Added 1 code cell
+- 19 cells total
+
+---
+
+### Step 19: Outlier Impact Analysis
+**Commit:** "Analyze impact of outliers on decision boundary"  
+**Date:** 2024-10-20 (afternoon)
+
+**Summary:**
+- Trained Linear SVM on noisy data
+- Calculated accuracy (lower than clean data)
+- Visualized decision boundary with outliers
+- Demonstrated impact of noise on classification
+
+**Updated:**
+- neural_network_fundamentals.ipynb
+  - Trained Linear SVM on outlier data
+  - Printed accuracy (degraded due to noise)
+  - Visualized decision boundary showing impact
+  - Boundary affected by mislabeled points
+
+**Changes:**
+- Added 1 code cell
+- 20 cells total (all content implemented)
+
+---
+
+### Step 20: Documentation Enhancement
 **Commit:** "Enhance README with comprehensive documentation"  
-**Date:** 2024-10-22
+**Date:** 2024-10-21
 
 **Summary:**
-- Expanded README with detailed sections
-- Added setup instructions (pip and conda)
-- Documented repository structure
-- Added troubleshooting section
-- Improved reproducibility notes
+- Upgraded README to portfolio-grade standards
+- Added detailed sections for setup, usage, troubleshooting
+- Documented stack, structure, inputs/outputs
+- Professional presentation of project
 
 **Updated:**
 - README.md
-  - Added detailed tech stack descriptions
+  - Added comprehensive overview and problem statement
+  - Added detailed tech stack with descriptions
   - Added repository structure diagram
-  - Added comprehensive setup instructions
-  - Added troubleshooting guide
-  - Added key concepts section
+  - Added step-by-step setup instructions (pip + conda)
+  - Added clear run instructions
+  - Added data/inputs section (synthetic data)
+  - Added outputs section
+  - Added key concepts demonstrated
   - Added reproducibility notes
+  - Added troubleshooting section
 
 **Changes:**
-- Complete README overhaul for clarity
-- Step-by-step setup instructions
-- Multiple installation methods (pip, conda)
-- Clear run instructions
-- Troubleshooting common issues
-- Professional documentation standards
+- Complete README overhaul (portfolio-ready)
 
 ---
 
-### Step 14: Final Portfolio Refinement
-**Commit:** "Final portfolio refinement and documentation polish"  
+### Step 21: Final Portfolio Refinement
+**Commit:** "Final portfolio refinement - remove academic traces"  
 **Date:** 2024-10-23
 
 **Summary:**
-- Polished all notebook markdown cells for clarity
-- Ensured consistent formatting throughout
-- Verified all code executes without errors
-- Finalized project for portfolio presentation
-- Added professional framing to all sections
-- Final quality assurance pass
+- Final cleanup to make project portfolio-ready
+- Removed all assignment/academic language from notebook
+- Ensured professional presentation throughout
+- Finalized all documentation
+- This step matches the current repository state exactly
 
 **Updated:**
 - neural_network_fundamentals.ipynb
-  - Refined all markdown cells
-  - Improved code comments
-  - Ensured consistent style
-  - Professional section headers
+  - Professional markdown sections throughout
+  - No assignment references
+  - Clean, educational presentation
+  - 19 cells total (10 markdown, 9 code)
 - README.md
-  - Final polish and clarity improvements
-  - Verified all instructions are accurate
-  - Added comprehensive overview
+  - Portfolio-grade documentation
+  - Comprehensive and professional
+- requirements.txt
+  - Only necessary dependencies: numpy, matplotlib, scikit-learn, jupyter
+  - No unused packages
 
 **Changes:**
-- Final markdown cell refinement
-- Consistent professional tone throughout
-- Verified execution of all code cells
-- Ensured portfolio-ready quality
-- All documentation aligned
-- Project ready for showcase
+- Final polish on all files
+- Repository is portfolio-ready
+- All academic traces removed
+- Professional naming and structure throughout
 
 ---
 
 ## Repository State Verification
 
-### Final State (Step 14):
-- All code functional and tested ✓
-- Professional documentation throughout ✓
-- No academic/assignment traces ✓
-- Clear setup and run instructions ✓
-- Comprehensive README ✓
-- Portfolio-ready presentation ✓
+**Final Snapshot (Step 21) Contents:**
+```
+step_21/
+├── .gitignore
+├── README.md
+├── neural_network_fundamentals.ipynb
+└── requirements.txt
+```
 
-### File Count:
-- Core files: 3 (README.md, requirements.txt, neural_network_fundamentals.ipynb)
-- Config: 1 (.gitignore)
-- Total snapshot files per step: 4
+**Snapshot Integrity:**
+- ✅ All 21 steps created with sequential integer naming (step_01 to step_21)
+- ✅ No snapshot contains `history/` directory (no recursion)
+- ✅ No snapshot contains `.git/` directory
+- ✅ Step 21 matches current repository state exactly (excluding .github, history, ledger files)
+- ✅ Progressive implementation from minimal setup to complete portfolio-ready state
+- ✅ Two realistic OOPS→HOTFIX sequences included (steps 05-06, steps 12-13)
 
-### Dependencies:
-- numpy>=1.21.0
-- matplotlib>=3.3.0
-- scikit-learn>=1.0.0
-- jupyter>=1.0.0
+**Timeline Summary:**
+- Development period: October 15-23, 2024 (9 days)
+- Total commits: 21 incremental commits
+- Workflow demonstrates: initial setup → feature implementation → bugs → immediate fixes → optimization → documentation → portfolio refinement
 
-### Execution:
-All notebook cells execute successfully without errors.
-
-### Snapshot Integrity:
-- 14 complete snapshots created (step_01 through step_14)
-- No snapshot contains `history/` directory (no recursion) ✓
-- No snapshot contains `.git/` directory ✓
-- Step_14 matches current repository state exactly ✓
-- Each step is a full snapshot, not a diff ✓
-
-### Development Realism:
-- Timeline spans 9 days (Oct 15-23, 2024)
-- Includes realistic OOPS→HOTFIX sequence (steps 04-05)
-- Logical progression from setup to completion
-- Natural development workflow demonstrated
-- Incremental feature additions
-- Bug introduction and fix shows real development process
+**Expansion Achievement:**
+- N_old: 14 steps
+- N_target: 21 steps (ceil(14 × 1.5) = 21)
+- N_achieved: 21 steps ✓
+- Multiplier: 1.50× (exactly meets 1.5× requirement)
